@@ -13,10 +13,10 @@ spec:
         app: webpage
     spec:
       containers:
-      - name: webpage
-        image: fabricioveronez/pagina-exemplo:blue
-        ports:
-        - containerPort: 80
+        - name: webpage
+          image: fabricioveronez/pagina-exemplo:blue
+          ports:
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -26,12 +26,6 @@ spec:
   selector:
     app: webpage
   ports:
-  - port: 8089
-    targetPort: 80
+    - port: 8089
+      targetPort: 80
   type: LoadBalancer
-
-
-
-
-
-
